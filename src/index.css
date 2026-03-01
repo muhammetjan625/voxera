@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* VS Code uyarı verirse görmezden gelebilirsin, v4 için doğru yapı budur */
+@theme {
+  --color-voxera-dark: #121315;
+  --color-voxera-sidebar: #0f1012;
+  --color-voxera-accent: #7289da;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  @apply bg-[#121315] text-gray-200 antialiased overflow-hidden;
+}
+
+/* Scrollbar Tasarımı */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1f22;
+  border-radius: 10px;
+}
