@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import tailwindcss from '@tailwindcss/vite'; // <--- BU EKSİKTİ!
 
 export default defineConfig({
   plugins: [
+    tailwindcss(), // <--- CSS motorunu buraya ateşliyoruz
     react(),
     VitePWA({
       registerType: 'autoUpdate',
@@ -28,5 +30,7 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  // Dosya yollarının canlıda (Firebase) şaşmaması için bunu da ekle:
+  base: './' 
 });
